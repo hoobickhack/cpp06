@@ -1,4 +1,4 @@
-SRCS = main.cpp  Serializer.cpp
+SRCS = main.cpp  Abc.cpp Base.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 NAME = a.out

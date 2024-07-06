@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 19:53:08 by isouaidi          #+#    #+#             */
-/*   Updated: 2024/07/06 14:40:06 by isouaidi         ###   ########.fr       */
+/*   Created: 2024/07/06 14:36:35 by isouaidi          #+#    #+#             */
+/*   Updated: 2024/07/06 14:58:51 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Abc.hpp"
 
-#include <iostream>
-
-class Base{
-public :
-virtual ~Base();
-};
-
-Base* generate(void);
-void identify(Base* p);
-void identify(Base& p);
-
+int main(){
+	Base *random;
+	
+	random = generate();
+	std ::cout << "TEST WITH &PTR" << std::endl;
+	identify(*random);
+	std::cout << "TEST WITH *PTR" << std::endl;
+	identify(random);
+}
